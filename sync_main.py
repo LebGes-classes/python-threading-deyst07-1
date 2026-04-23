@@ -12,6 +12,8 @@ from services import (
 
 def process_file(input_file, output_file):
 
+    print(f"Начата обработка {input_file}")
+
     data = DeviceData(input_file)
 
     data.load()
@@ -34,6 +36,9 @@ def process_file(input_file, output_file):
             "pivot": pivot,
         }
     )
+
+    print(f"{input_file} завершён")
+
 
 
 def main():
